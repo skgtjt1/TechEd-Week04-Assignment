@@ -34,3 +34,26 @@ app.get("/testing", function (req, res) {
       "The server is accepting GET requests at the /testing endpoint on Render.com!",
   }); //this still confuses me a little but I'm assuming the get function's second argument within the cally B can be addressed using dot notation fot the json method. Not totally logical to me yet. This will pass a json message when a GET request is made to this endpoint. We've used the .listen method work on the app variable we set up so that's how it works... I guess.
 });
+
+app.get("/reviews", async (req, res) => {
+  const result = await db.query(
+    `
+     SELECT * FROM Reviews`
+  );
+  res.json(result.rows);
+});
+
+app.post("/reviews", async (req, res) => {
+  const { username, comment, score } = req.body;
+
+  try {
+    await db.query(
+      `INSERT into Reviews (Username, Comment, Score) VALUES ($1, $2, $3)`,
+      [username, comment, score]
+    );
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("NOOOOOOOO NO INSERT FOR YOU", error);
+    res.status(500).json({ success: false });
+  }
+});
