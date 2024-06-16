@@ -13,7 +13,7 @@ A repo for the Week 4 assignment for Tech Educators - A visitor guestbook
 - Ideally as a user I would like to be able to delete my message if I choose.
 - Ideally as a user I would like to be able to rate messages.
 
-2. Make wireframe
+2. Make wireframe - I have provided a wireframe in the/client folder
 3. MOSCOW:
 
 ### Must Have:
@@ -25,7 +25,6 @@ A repo for the Week 4 assignment for Tech Educators - A visitor guestbook
 ### Should Have:
 
 1. Media queries to adjust for screen size
-2.
 
 ### Could Have:
 
