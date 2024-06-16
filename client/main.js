@@ -18,3 +18,33 @@ async function fetchAndShowReviews() {
 }
 
 fetchAndShowReviews();
+
+form.addEventListener("submit", submitButton);
+
+async function submitButton(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const formValues = Object.fromEntries(formData);
+
+  try {
+    const response = await fetch("http://localhost:6969/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      console.log("Comment uploaded to database");
+      fetchAndShowReviews();
+    } else {
+      console.log("Error with database update.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
