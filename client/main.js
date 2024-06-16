@@ -1,7 +1,9 @@
 const form = document.getElementById("commentForm");
 
 async function fetchAndShowReviews() {
-  const response = await fetch("http://localhost:6969/reviews");
+  const response = await fetch(
+    "https://teched-week04-assignment.onrender.com/reviews"
+  );
   const reviewList = await response.json();
   console.log(reviewList);
   const reviewListDiv = document.getElementById("reviewsDiv");
@@ -28,13 +30,16 @@ async function submitButton(event) {
   const formValues = Object.fromEntries(formData);
 
   try {
-    const response = await fetch("http://localhost:6969/reviews", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+    const response = await fetch(
+      "https://teched-week04-assignment.onrender.com/reviews",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      }
+    );
 
     const data = await response.json();
 
