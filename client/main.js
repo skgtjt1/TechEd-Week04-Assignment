@@ -46,6 +46,7 @@ async function submitButton(event) {
     if (data.success) {
       console.log("Comment uploaded to database");
       fetchAndShowReviews();
+      form.reset(); //need to clear the form one submit
     } else {
       console.log("Error with database update.");
     }
