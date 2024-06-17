@@ -1,0 +1,48 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1513351278168-75ebf15a5e62?q=80&w=2974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+#commentBox {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#commentForm label {
+  margin-bottom: 5px;
+}
+
+#commentForm input[type="text"],
+#commentForm textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+#commentForm button {
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+}
+
+#reviewsDiv {
+  margin-top: 20px;
+}

@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
     <title>Holiday Guestbook</title>
   </head>
   <body>
-    <h1>Testing!</h1>
+    <h1>Thank you for visiting Mountain Lodge Spa!</h1>
     <div id="commentBox">
       <form id="commentForm">
         <label for="username">Username: </label>
@@ -19,10 +19,12 @@
         <textarea id="comment" name="comment" rows="4" cols="50"> </textarea
         ><br /><br />
 
-        <label for="score">Score: </label>
+        <label for="score">Review Score: </label>
         <input type="text" name="score" id="score" required />
         <button type="submit">SUBMIT</button>
       </form>
+
+      <h2>Previous reviews below:</h2>
 
       <div id="reviewsDiv"></div>
     </div>
